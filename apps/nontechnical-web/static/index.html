@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Markdown Converter</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace">
+        <div class="intro">
+          <p class="eyebrow">MarkItDown for everyone</p>
+          <h1>Convert documents to clean Markdown.</h1>
+          <p>Drop in a PDF, Office file, image, spreadsheet, or web document and get readable Markdown back.</p>
+        </div>
+
+        <form id="upload-form" class="drop-zone">
+          <input id="file-input" name="file" type="file" />
+          <div>
+            <strong>Drop a file here</strong>
+            <span>or click to choose one from your computer</span>
+          </div>
+        </form>
+
+        <div class="status-row">
+          <span id="file-name">No file selected</span>
+          <span id="status">Ready</span>
+        </div>
+
+        <section class="result-panel" aria-label="Converted Markdown">
+          <div class="result-toolbar">
+            <h2>Markdown output</h2>
+            <div class="actions">
+              <button id="copy-button" type="button" disabled>Copy</button>
+              <button id="download-button" type="button" disabled>Download .md</button>
+            </div>
+          </div>
+          <textarea id="output" spellcheck="false" placeholder="Converted Markdown will appear here."></textarea>
+        </section>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
